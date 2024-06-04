@@ -26,7 +26,7 @@ import matplotlib
 html_temp = """
 		<div style="background-color:#333333;padding:10px;border-radius:20px">   
 		<h1 style="color:white;text-align:center;font-weight:bold;">金融大數據分析 </h1>
-		<h2 style="color:white;text-align:center;">Financial Dashboard and Program Trading </h2>
+		<h2 style="color:white;text-align:center;">Financial big data analysis </h2>
 		</div>
 		"""
 stc.html(html_temp)
