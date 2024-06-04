@@ -31,14 +31,20 @@ html_temp = """
 		"""
 stc.html(html_temp)
 
-
-###### 讀取資料
-@st.cache_data(ttl=3600, show_spinner="正在加載資料...")  ## Add the caching decorator
+@st.cache_data(ttl=3600, show_spinner="正在加載資料...")
 def load_data(path):
     df = pd.read_pickle(path)
     return df
-# ##### 讀取 excel 檔
-# df_original = pd.read_excel("kbars_2330_2022-01-01-2022-11-18.xlsx")
+
+# 在這裡設置進度條
+progress_bar = st.progress(0)
+
+# 加載資料
+df_original = load_data("kbars_2330_2022-01-01-2022-11-18.xlsx")
+
+# 結束進度條
+progress_bar.empty()
+
 
 
 ###### 選擇金融商品
