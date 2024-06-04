@@ -24,8 +24,8 @@ import matplotlib
 ####### (1) 開始設定 #######
 ###### 設定網頁標題介面 
 html_temp = """
-		<div style="background-color:#3872fb;padding:10px;border-radius:10px">   
-		<h1 style="color:white;text-align:center;">金融看板與程式交易平台 </h1>
+		<div style="background-color:#333333;padding:10px;border-radius:10px">   
+		<h1 style="color:white;text-align:center;">金融大數據分析 </h1>
 		<h2 style="color:white;text-align:center;">Financial Dashboard and Program Trading </h2>
 		</div>
 		"""
