@@ -19,7 +19,7 @@ import matplotlib
 ####### (1) 開始設定 #######
 ###### 設定網頁標題介面 
 html_temp = """
-		<div style="background-color:#000000;padding:30px;border-radius:15px">
+		<div style="background-color:#000000;padding:20px;border-radius:15px">
 		<h1 style="color:white;text-align:center;">金融大數據分析</h1>
 		<h2 style="color:white;text-align:center;">Financial Big Data Analysis </h2>
 		</div>
