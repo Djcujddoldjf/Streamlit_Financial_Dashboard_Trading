@@ -38,20 +38,20 @@ def load_data(path):
 
 ###### 選擇金融商品
 st.subheader("選擇金融商品: ")
-# choices = ['台積電2022.1.1~2024.4.9']
-choices = ['台積電2022.1.1~2024.4.9','英業達2020.1.2~2024.4.12', '堤維西2020.1.2~2024.4.12']
+# choices = ['台積電2022/1/1~2024/4/9']
+choices = ['台積電2022/1/1~2024/4/9','英業達2020/1/2~2024/4/12', '堤維西2020/1/2~2024/4/12']
 choice = st.selectbox('選擇金融商品', choices, index=0)
 ##### 读取Pickle文件
-if choice == '台積電2022.1.1~2024.4.9':
+if choice == '台積電2022/1/1~2024/4/9':
     df_original = load_data('kbars_2330_2022-01-01-2024-04-09.pkl')
     # df_original = load_data('kbars_2330_2022-01-01-2024-04-09.pkl')
     # df_original = load_data('kbars_2330_2022-01-01-2022-11-18.pkl')  
     # df_original = pd.read_pickle('kbars_2330_2022-01-01-2022-11-18.pkl')
     #df.columns  ## Index(['Unnamed: 0', 'time', 'open', 'low', 'high', 'close', 'volume','amount'], dtype='object')
     # df_original = df_original.drop('Unnamed: 0',axis=1)
-if choice == '英業達2020.1.2~2024.4.12':
+if choice == '英業達2020/1/2~2024/4/12':
     df_original = load_data('kbars_2356_2020-01-01-2024-04-12.pkl')
-if choice == '堤維西2020.1.2~2024.4.12':
+if choice == '堤維西2020/1/2~2024/4/12':
     df_original = load_data('kbars_1522_2020-01-01-2024-04-12.pkl')
 
 
@@ -59,13 +59,13 @@ if choice == '堤維西2020.1.2~2024.4.12':
 
 ###### 選擇資料區間
 st.subheader("選擇資料時間區間")
-if choice == '台積電2022.1.1~2024.4.9':
+if choice == '台積電2022/1/1~2024/4/9':
     start_date = st.text_input('輸入開始日期(日期格式: 2022-01-01), 區間:2022-01-01 至 2024-04-09', '2022-01-01')
     end_date = st.text_input('輸入結束日期 (日期格式: 2024-04-09), 區間:2022-01-01 至 2024-04-09', '2024-04-09')
-if choice == '英業達2020.1.2~2024.4.12':
+if choice == '英業達2020/1/2~2024/4/12':
     start_date = st.text_input('輸入開始日期(日期格式: 2020-01-02), 區間:2020-01-02 至 2024-04-12', '2020-01-02')
     end_date = st.text_input('輸入結束日期 (日期格式: 2024-04-12), 區間:2020-01-02 至 2024-04-12', '2024-04-12')
-if choice == '堤維西2020.1.2~2024.4.12':
+if choice == '堤維西2020/1/2~2024/4/12':
     start_date = st.text_input('輸入開始日期(日期格式: 2020-01-02), 區間:2020-01-02 至 2024-04-12', '2020-01-02')
     end_date = st.text_input('輸入結束日期 (日期格式: 2024-04-12), 區間:2020-01-02 至 2024-04-12', '2024-04-12')
 
